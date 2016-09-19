@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace MyApplication
 {
-    public partial class PasswordChange : Infrastructure.BaseForm
+    public partial class PasswordChangeForm : Infrastructure.BaseForm
     {
-        public PasswordChange()
+        public PasswordChangeForm()
         {
             InitializeComponent();
         }
@@ -15,8 +15,7 @@ namespace MyApplication
         {
 
         }
-
-        private void PasswordChange_Load(object sender, System.EventArgs e)
+        private void PasswordChangeForm_Load(object sender, System.EventArgs e)
         {
 
         }
@@ -40,7 +39,7 @@ namespace MyApplication
                     System.Windows.Forms.MessageBox.Show("Old Password is wrong");
                 }
 
-                if (NewPasswordTextBox.Text==ConfirmePasswordTextBox.Text)
+                if (NewPasswordTextBox.Text == ConfirmePasswordTextBox.Text)
                 {
                     oUser.Password = NewPasswordTextBox.Text;
                 }
@@ -73,5 +72,7 @@ namespace MyApplication
             }
 
         }
+
+
     }
 }

@@ -47,7 +47,7 @@ namespace MyApplication
 
         private void passwordChangeToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            UpdateProfileForm frmPasswordChange = new UpdateProfileForm();
+           PasswordChangeForm frmPasswordChange = new PasswordChangeForm();
 
             frmPasswordChange.Show();
         }

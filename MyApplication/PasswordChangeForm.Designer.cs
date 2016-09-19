@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class PasswordChange
+    partial class PasswordChangeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -106,7 +106,7 @@
             this.ConfirmButton.UseVisualStyleBackColor = true;
             this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
-            // PasswordChange
+            // PasswordChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,9 +119,9 @@
             this.Controls.Add(this.NewPasswordLable);
             this.Controls.Add(this.OldPasswordLable);
             this.MinimumSize = new System.Drawing.Size(374, 195);
-            this.Name = "PasswordChange";
-            this.Text = "PasswordChange";
-            this.Load += new System.EventHandler(this.PasswordChange_Load);
+            this.Name = "PasswordChangeForm";
+            this.Text = "PasswordChangeForm";
+            this.Load += new System.EventHandler(this.PasswordChangeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
