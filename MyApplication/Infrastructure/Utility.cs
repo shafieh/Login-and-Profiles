@@ -8,5 +8,6 @@ namespace Infrastructure
 		}
 
 		public static Models.User AuthenticatedUser { get; set; }
-	}
+        public static Models.User AuthenticatedPassword { get; set; }
+    }
 }

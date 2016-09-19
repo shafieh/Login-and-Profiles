@@ -28,92 +28,99 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.myMenuStrip = new System.Windows.Forms.MenuStrip();
-			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.myStatusStrip = new System.Windows.Forms.StatusStrip();
-			this.UsernameToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.myMenuStrip.SuspendLayout();
-			this.myStatusStrip.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// myMenuStrip
-			// 
-			this.myMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.UsernameToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.passwordChangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myMenuStrip.SuspendLayout();
+            this.myStatusStrip.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // myMenuStrip
+            // 
+            this.myMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem});
-			this.myMenuStrip.Location = new System.Drawing.Point(0, 0);
-			this.myMenuStrip.Name = "myMenuStrip";
-			this.myMenuStrip.Size = new System.Drawing.Size(331, 24);
-			this.myMenuStrip.TabIndex = 0;
-			this.myMenuStrip.Text = "menuStrip1";
-			// 
-			// settingsToolStripMenuItem
-			// 
-			this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.myMenuStrip.Name = "myMenuStrip";
+            this.myMenuStrip.Size = new System.Drawing.Size(331, 24);
+            this.myMenuStrip.TabIndex = 0;
+            this.myMenuStrip.Text = "menuStrip1";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateProfileToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.exitToolStripMenuItem});
-			this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-			this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-			this.settingsToolStripMenuItem.Text = "&Settings";
-			// 
-			// updateProfileToolStripMenuItem
-			// 
-			this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
-			this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.updateProfileToolStripMenuItem.Text = "&Update Profile";
-			this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
-			// 
-			// toolStripMenuItem1
-			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.exitToolStripMenuItem.Text = "E&xit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-			// 
-			// myStatusStrip
-			// 
-			this.myStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem,
+            this.passwordChangeToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "&Settings";
+            // 
+            // updateProfileToolStripMenuItem
+            // 
+            this.updateProfileToolStripMenuItem.Name = "updateProfileToolStripMenuItem";
+            this.updateProfileToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.updateProfileToolStripMenuItem.Text = "&Update Profile";
+            this.updateProfileToolStripMenuItem.Click += new System.EventHandler(this.updateProfileToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(162, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // myStatusStrip
+            // 
+            this.myStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.UsernameToolStripStatusLabel});
-			this.myStatusStrip.Location = new System.Drawing.Point(0, 239);
-			this.myStatusStrip.Name = "myStatusStrip";
-			this.myStatusStrip.Size = new System.Drawing.Size(331, 22);
-			this.myStatusStrip.TabIndex = 1;
-			this.myStatusStrip.Text = "statusStrip1";
-			// 
-			// UsernameToolStripStatusLabel
-			// 
-			this.UsernameToolStripStatusLabel.Name = "UsernameToolStripStatusLabel";
-			this.UsernameToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
-			this.UsernameToolStripStatusLabel.Text = "toolStripStatusLabel1";
-			// 
-			// MainForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(331, 261);
-			this.Controls.Add(this.myStatusStrip);
-			this.Controls.Add(this.myMenuStrip);
-			this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.MainMenuStrip = this.myMenuStrip;
-			this.Name = "MainForm";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Main";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.Load += new System.EventHandler(this.MainForm_Load);
-			this.myMenuStrip.ResumeLayout(false);
-			this.myMenuStrip.PerformLayout();
-			this.myStatusStrip.ResumeLayout(false);
-			this.myStatusStrip.PerformLayout();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.myStatusStrip.Location = new System.Drawing.Point(0, 239);
+            this.myStatusStrip.Name = "myStatusStrip";
+            this.myStatusStrip.Size = new System.Drawing.Size(331, 22);
+            this.myStatusStrip.TabIndex = 1;
+            this.myStatusStrip.Text = "statusStrip1";
+            // 
+            // UsernameToolStripStatusLabel
+            // 
+            this.UsernameToolStripStatusLabel.Name = "UsernameToolStripStatusLabel";
+            this.UsernameToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.UsernameToolStripStatusLabel.Text = "toolStripStatusLabel1";
+            // 
+            // passwordChangeToolStripMenuItem
+            // 
+            this.passwordChangeToolStripMenuItem.Name = "passwordChangeToolStripMenuItem";
+            this.passwordChangeToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.passwordChangeToolStripMenuItem.Text = "&PasswordChange";
+            this.passwordChangeToolStripMenuItem.Click += new System.EventHandler(this.passwordChangeToolStripMenuItem_Click);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(331, 261);
+            this.Controls.Add(this.myStatusStrip);
+            this.Controls.Add(this.myMenuStrip);
+            this.MainMenuStrip = this.myMenuStrip;
+            this.Name = "MainForm";
+            this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.myMenuStrip.ResumeLayout(false);
+            this.myMenuStrip.PerformLayout();
+            this.myStatusStrip.ResumeLayout(false);
+            this.myStatusStrip.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -126,5 +133,6 @@
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.StatusStrip myStatusStrip;
 		private System.Windows.Forms.ToolStripStatusLabel UsernameToolStripStatusLabel;
-	}
+        private System.Windows.Forms.ToolStripMenuItem passwordChangeToolStripMenuItem;
+    }
 }

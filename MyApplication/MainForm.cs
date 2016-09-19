@@ -44,5 +44,12 @@ namespace MyApplication
 			frmUpdateProfile.Show();
             
 		}
-	}
+
+        private void passwordChangeToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            UpdateProfileForm frmPasswordChange = new UpdateProfileForm();
+
+            frmPasswordChange.Show();
+        }
+    }
 }
