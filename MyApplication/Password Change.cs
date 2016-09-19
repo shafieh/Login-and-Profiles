@@ -43,25 +43,21 @@ namespace MyApplication
 
                 frmMain.Show();
 
-
-
-
-
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
 
-                throw;
+                System.Windows.Forms.MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
-
+                if (oDatabaseContext != null)
+                {
+                    oDatabaseContext.Dispose();
+                    oDatabaseContext = null;
+                }
             }
 
-            if (NewPasswordTextBox.Text == ConfirmePasswordTextBox.Text)
-            {
-
-            }
         }
     }
 }
