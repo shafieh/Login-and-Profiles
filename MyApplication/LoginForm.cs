@@ -94,7 +94,7 @@ namespace MyApplication
 			RegisterForm frmRegister = new RegisterForm();
 
 			frmRegister.Show();
-            //just a change
+            
 		}
 	}
 }
