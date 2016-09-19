@@ -25,6 +25,9 @@ namespace MyApplication
             Models.DatabaseContext oDatabaseContext = null;
             try
             {
+                oDatabaseContext =
+                    new Models.DatabaseContext();
+
                 if (OldPasswordTextBox.Text == null)
                 {
                     System.Windows.Forms.MessageBox.Show("You need to import Old Password");
@@ -42,6 +45,12 @@ namespace MyApplication
                 if (NewPasswordTextBox.Text == ConfirmePasswordTextBox.Text)
                 {
                     oUser.Password = NewPasswordTextBox.Text;
+
+                    oDatabaseContext.Users.Add(oUser);
+
+                    oDatabaseContext.SaveChanges();
+
+                    System.Windows.Forms.MessageBox.Show("Your Password Change is done Successfully");
                 }
                 else
                 {
@@ -49,6 +58,8 @@ namespace MyApplication
                 }
 
                 Infrastructure.Utility.AuthenticatedPassword = oUser;
+
+               
 
                 Hide();
 
