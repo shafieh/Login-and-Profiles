@@ -26,13 +26,27 @@ namespace MyApplication
             Models.DatabaseContext oDatabaseContext = null;
             try
             {
+                if (OldPasswordTextBox.Text == null)
+                {
+                    System.Windows.Forms.MessageBox.Show("You need to import Old Password");
+                }
+
                 Models.User oUser =
                     oDatabaseContext.Users.Where(current => string.Compare(current.Password, OldPasswordTextBox.Text, true) == 0)
                     .FirstOrDefault();
 
                 if (oUser == null)
                 {
-                    System.Windows.Forms.MessageBox.Show("Old Password is required");
+                    System.Windows.Forms.MessageBox.Show("Old Password is wrong");
+                }
+
+                if (NewPasswordTextBox.Text==ConfirmePasswordTextBox.Text)
+                {
+                    oUser.Password = NewPasswordTextBox.Text;
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("Check Your Confirm Password");
                 }
 
                 Infrastructure.Utility.AuthenticatedPassword = oUser;

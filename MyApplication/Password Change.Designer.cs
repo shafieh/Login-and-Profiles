@@ -71,6 +71,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OldPasswordTextBox.Location = new System.Drawing.Point(119, 21);
             this.OldPasswordTextBox.Name = "OldPasswordTextBox";
+            this.OldPasswordTextBox.PasswordChar = '*';
             this.OldPasswordTextBox.Size = new System.Drawing.Size(224, 21);
             this.OldPasswordTextBox.TabIndex = 1;
             // 
@@ -80,6 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NewPasswordTextBox.Location = new System.Drawing.Point(119, 47);
             this.NewPasswordTextBox.Name = "NewPasswordTextBox";
+            this.NewPasswordTextBox.PasswordChar = '*';
             this.NewPasswordTextBox.Size = new System.Drawing.Size(224, 21);
             this.NewPasswordTextBox.TabIndex = 3;
             // 
@@ -89,6 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfirmePasswordTextBox.Location = new System.Drawing.Point(119, 73);
             this.ConfirmePasswordTextBox.Name = "ConfirmePasswordTextBox";
+            this.ConfirmePasswordTextBox.PasswordChar = '*';
             this.ConfirmePasswordTextBox.Size = new System.Drawing.Size(224, 21);
             this.ConfirmePasswordTextBox.TabIndex = 5;
             // 
