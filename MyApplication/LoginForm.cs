@@ -57,9 +57,9 @@ namespace MyApplication
 					return;
 				}
 
-				Infrastructure.Utility.AuthenticatedUser = oUser;
+                Infrastructure.Utility.AuthenticatedUser = oUser;
 
-				Hide();
+                Hide();
 
 				MainForm frmMain = new MainForm();
 

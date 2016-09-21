@@ -28,19 +28,22 @@ namespace MyApplication
                 oDatabaseContext =
                     new Models.DatabaseContext();
 
+                Models.User oUser =
+                     oDatabaseContext.Users.Where(current => string.Compare(current.Password, OldPasswordTextBox.Text, true) == 0)
+                     .FirstOrDefault();
+
                 if (OldPasswordTextBox.Text == null)
                 {
                     System.Windows.Forms.MessageBox.Show("You need to import Old Password");
                 }
 
-                Models.User oUser =
-                    oDatabaseContext.Users.Where(current => string.Compare(current.Password, OldPasswordTextBox.Text, true) == 0)
-                    .FirstOrDefault();
-
-                if (oUser == null)
+                
+                if (string.Compare(oUser.Password, OldPasswordTextBox.Text, ignoreCase: false) != 0)
                 {
                     System.Windows.Forms.MessageBox.Show("Old Password is wrong");
                 }
+
+                Infrastructure.Utility.AuthenticatedPassword = oUser;
 
                 if (NewPasswordTextBox.Text == ConfirmePasswordTextBox.Text)
                 {
@@ -57,7 +60,6 @@ namespace MyApplication
                     System.Windows.Forms.MessageBox.Show("Check Your Confirm Password");
                 }
 
-                Infrastructure.Utility.AuthenticatedPassword = oUser;
 
                
 
@@ -66,6 +68,7 @@ namespace MyApplication
                 MainForm frmMain = new MainForm();
 
                 frmMain.Show();
+
 
             }
             catch (System.Exception ex)
