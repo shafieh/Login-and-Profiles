@@ -22,31 +22,42 @@ namespace MyApplication
 
         private void ConfirmButton_Click(object sender, System.EventArgs e)
         {
+            ///در ابتدا حالتی را می نویسیم که کاربر پسورد قدیمی را وارد نکند
+
+            //*****************
+
+            if (string.IsNullOrWhiteSpace(OldPasswordTextBox.Text))
+            {
+
+                System.Windows.Forms.MessageBox.Show("You need to import Old Password");
+
+                return;
+            }
+
+            //******************
+
             Models.DatabaseContext oDatabaseContext = null;
+
             try
             {
+
                 oDatabaseContext =
-                    new Models.DatabaseContext();
+                               new Models.DatabaseContext();
 
                 Models.User oUser =
                      oDatabaseContext.Users.Where(current => string.Compare(current.Password, OldPasswordTextBox.Text, true) == 0)
                      .FirstOrDefault();
+                ///حالتی را بررسی می کنیم که پسورد غلط وارد شود
 
-                if (OldPasswordTextBox.Text == null)
-                {
-                    System.Windows.Forms.MessageBox.Show("You need to import Old Password");
-                }
-
-                
                 if (string.Compare(oUser.Password, OldPasswordTextBox.Text, ignoreCase: false) != 0)
                 {
                     System.Windows.Forms.MessageBox.Show("Old Password is wrong");
                 }
 
-                Infrastructure.Utility.AuthenticatedPassword = oUser;
 
                 if (NewPasswordTextBox.Text == ConfirmePasswordTextBox.Text)
                 {
+
                     oUser.Password = NewPasswordTextBox.Text;
 
                     oDatabaseContext.Users.Add(oUser);
@@ -55,13 +66,15 @@ namespace MyApplication
 
                     System.Windows.Forms.MessageBox.Show("Your Password Change is done Successfully");
                 }
+
                 else
                 {
                     System.Windows.Forms.MessageBox.Show("Check Your Confirm Password");
                 }
 
 
-               
+                Infrastructure.Utility.AuthenticatedPassword = oUser;
+
 
                 Hide();
 
