@@ -57,15 +57,19 @@ namespace MyApplication
 
                 if (NewPasswordTextBox.Text == ConfirmePasswordTextBox.Text)
                 {
+                    //var varUsers =
+                    //      oDatabaseContext.Users
+                    //      .Where(current => current.Password,NewPasswordTextBox.Text)
+                    //      .ToList();
 
                     oUser.Password = NewPasswordTextBox.Text;
 
-                    oDatabaseContext.Users.Add(oUser);
 
-                    oDatabaseContext.SaveChanges();
+                                       oDatabaseContext.SaveChanges();
 
                     System.Windows.Forms.MessageBox.Show("Your Password Change is done Successfully");
                 }
+
 
                 else
                 {
